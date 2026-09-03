@@ -9,7 +9,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>NOVA MOBILE</title>
+    <title>TH | Premium Camper</title>
 
     <link
         rel="stylesheet"
@@ -17,33 +17,45 @@
     >
 </head>
 
+
 <body>
 
-    <!-- HEADER -->
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
     <header class="header">
 
         <div class="header-inner">
 
-            <a href="/main" class="logo">
-                NOVA
+            <a
+                href="/main"
+                class="logo"
+            >
+                TH
             </a>
+
 
             <nav>
 
-                <a href="/main" class="active">
+                <a
+                    href="/main"
+                    class="active"
+                >
                     MAIN
                 </a>
 
-                <a href="/about">
-                    ABOUT
+                <a href="#models">
+                    MODELS
                 </a>
 
                 <a href="#features">
                     FEATURES
                 </a>
 
-                <a href="#colors">
-                    COLORS
+                <a href="/about">
+                    ABOUT
                 </a>
 
             </nav>
@@ -53,27 +65,43 @@
     </header>
 
 
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
     <main>
 
-        <!-- HERO -->
+
+        <!-- =================================
+             HERO
+        ================================== -->
+
         <section class="hero">
 
             <div class="hero-inner">
 
+
+                <!-- 왼쪽 텍스트 -->
+
                 <div class="hero-text">
 
                     <p class="hero-small">
-                        NOVA ONE
+                        TH R1
                     </p>
+
 
                     <h1>
-                        가장 가벼운 혁신.
+                        일상을 떠나,<br>
+                        어디서든 집처럼.
                     </h1>
 
+
                     <p class="hero-subtitle">
-                        강력한 성능과 새로운 디자인을<br>
-                        하나의 스마트폰에.
+                        자유로운 여행을 위한<br>
+                        프리미엄 캠핑카.
                     </p>
+
 
                     <div class="hero-buttons">
 
@@ -84,11 +112,12 @@
                             더 알아보기
                         </a>
 
+
                         <a
-                            href="#colors"
+                            href="#models"
                             class="btn btn-secondary"
                         >
-                            제품 보기
+                            모델 보기
                         </a>
 
                     </div>
@@ -96,308 +125,444 @@
                 </div>
 
 
+
+                <!-- 오른쪽 메인 이미지 -->
+
                 <div class="hero-product">
 
                     <img
-                        src="{{ url_for('static', filename='images/nova-main.png') }}"
-                        alt="Nova One 스마트폰"
+                        src="{{ url_for('static', filename='images/camper-main.png') }}"
+                        alt="TH R1 캠핑카"
                     >
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- INTRO -->
+
+        <!-- =================================
+             INTRO
+        ================================== -->
+
         <section class="intro">
 
             <p class="section-small">
-                NOVA ONE
+                TH R1
             </p>
 
+
             <h2>
-                새롭게. 더 강력하게.
+                여행의 새로운 기준.
             </h2>
 
+
             <p>
-                가장 필요한 기술만 남겼습니다.<br>
-                더 빠른 성능, 더 오래가는 배터리,<br>
-                그리고 당신의 순간을 담아내는 카메라.
+                단순한 이동수단을 넘어<br>
+                휴식과 여행을 위한 하나의 공간.<br>
+                TH R1과 함께 새로운 길을 만나보세요.
             </p>
 
         </section>
 
 
-        <!-- FEATURES -->
+
+        <!-- =================================
+             FEATURES
+        ================================== -->
+
         <section
             class="features"
             id="features"
         >
 
-            <!-- CAMERA -->
+
+            <!-- =============================
+                 SPACE
+            ============================== -->
+
             <article class="feature-large">
+
 
                 <div class="feature-text">
 
                     <p class="section-small">
-                        CAMERA
+                        SPACE
                     </p>
 
+
                     <h2>
-                        순간을<br>
-                        작품으로.
+                        작지만,<br>
+                        넓게.
                     </h2>
 
+
                     <p>
-                        AI 기반 이미지 처리 기술로
-                        낮과 밤을 가리지 않고
-                        더욱 선명한 사진을 촬영하세요.
+                        효율적으로 설계된 실내 공간은
+                        침실과 주방, 수납공간까지
+                        여행에 필요한 모든 것을 담았습니다.
                     </p>
 
                 </div>
+
 
 
                 <div class="feature-image">
 
                     <img
-                        src="{{ url_for('static', filename='images/camera-sample.jpg') }}"
-                        alt="카메라 촬영 예시"
+                        src="{{ url_for('static', filename='images/camper-interior.jpg') }}"
+                        alt="TH 캠핑카 실내"
                     >
 
                 </div>
 
+
             </article>
 
 
-            <!-- GRID -->
+
+            <!-- =============================
+                 FEATURE GRID
+            ============================== -->
+
             <div class="feature-grid">
 
-                <!-- PERFORMANCE -->
+
+                <!-- POWER -->
+
                 <article class="feature-card">
 
+
                     <div class="card-image">
 
                         <img
-                            src="{{ url_for('static', filename='images/chip.png') }}"
-                            alt="Nova 프로세서"
+                            src="{{ url_for('static', filename='images/camper-power.jpg') }}"
+                            alt="TH 캠핑카 전력 시스템"
                         >
 
                     </div>
 
+
+
                     <div class="card-content">
 
                         <p class="section-small">
-                            PERFORMANCE
+                            POWER
                         </p>
 
+
                         <h3>
-                            놀랍도록<br>
-                            빠르게.
+                            어디서든<br>
+                            자유롭게.
                         </h3>
 
+
                         <p>
-                            Nova X1 프로세서가
-                            빠르고 부드러운 성능을 제공합니다.
+                            대용량 배터리와 태양광 충전 시스템으로
+                            도심을 벗어나서도 안정적으로
+                            전기를 사용할 수 있습니다.
                         </p>
 
                     </div>
 
+
                 </article>
 
 
-                <!-- BATTERY -->
+
+                <!-- COMFORT -->
+
                 <article class="feature-card dark-card">
 
+
                     <div class="card-image">
 
                         <img
-                            src="{{ url_for('static', filename='images/battery.png') }}"
-                            alt="Nova 배터리"
+                            src="{{ url_for('static', filename='images/camper-comfort.jpg') }}"
+                            alt="TH 캠핑카 침실"
                         >
 
                     </div>
 
+
+
                     <div class="card-content">
 
                         <p class="section-small">
-                            BATTERY
+                            COMFORT
                         </p>
 
+
                         <h3>
-                            하루 종일.<br>
-                            그리고 그 이상.
+                            집처럼<br>
+                            편안하게.
                         </h3>
 
+
                         <p>
-                            효율적인 배터리 관리로
-                            아침부터 밤까지
-                            여유롭게 사용하세요.
+                            편안한 침실과 냉난방 시스템,
+                            은은한 실내 조명으로
+                            여행지에서도 편안한 휴식을 제공합니다.
                         </p>
 
                     </div>
 
+
                 </article>
 
+
             </div>
+
 
         </section>
 
 
-        <!-- COLORS -->
+
+        <!-- =================================
+             MODELS
+        ================================== -->
+
         <section
-            class="colors"
-            id="colors"
+            class="models"
+            id="models"
         >
+
 
             <div class="section-heading">
 
                 <p class="section-small">
-                    COLORS
+                    MODELS
                 </p>
+
 
                 <h2>
-                    당신의 색을 선택하세요.
+                    당신의 여행에 맞는 TH.
                 </h2>
 
+
                 <p>
-                    네 가지 컬러로 만나는 Nova One.
+                    여행 방식에 따라 선택할 수 있는 세 가지 모델.
                 </p>
 
             </div>
 
 
-            <div class="product-grid">
 
-                <!-- BLACK -->
-                <article class="product">
+            <div class="model-grid">
 
-                    <div class="product-image">
+
+                <!-- =========================
+                     TH R1
+                ========================== -->
+
+                <article class="model-card model-card-photo">
+
+
+                    <!-- 카드 전체 배경 사진 -->
+
+                    <div class="model-image">
 
                         <img
-                            src="{{ url_for('static', filename='images/nova-black.png') }}"
-                            alt="Nova One Black"
+                            src="{{ url_for('static', filename='images/camper-r1.jpg') }}"
+                            alt="TH R1"
                         >
 
                     </div>
 
-                    <h3>
-                        Midnight Black
-                    </h3>
 
-                    <span class="color-circle black"></span>
+
+                    <!-- 사진 위 텍스트 -->
+
+                    <div class="model-content">
+
+                        <p class="model-type">
+                            COMPACT
+                        </p>
+
+
+                        <h3>
+                            TH R1
+                        </h3>
+
+
+                        <p>
+                            가볍게 떠나는 여행을 위한<br>
+                            2인용 컴팩트 모델.
+                        </p>
+
+
+                        <a href="#">
+                            자세히 보기 ›
+                        </a>
+
+                    </div>
+
 
                 </article>
 
 
-                <!-- SILVER -->
-                <article class="product">
 
-                    <div class="product-image">
+                <!-- =========================
+                     TH R2
+                ========================== -->
+
+                <article class="model-card model-card-photo">
+
+
+                    <div class="model-image">
 
                         <img
-                            src="{{ url_for('static', filename='images/nova-silver.png') }}"
-                            alt="Nova One Silver"
+                            src="{{ url_for('static', filename='images/camper-r2.jpg') }}"
+                            alt="TH R2"
                         >
 
                     </div>
 
-                    <h3>
-                        Stella Silver
-                    </h3>
 
-                    <span class="color-circle silver"></span>
+
+                    <div class="model-content">
+
+                        <p class="model-type">
+                            FAMILY
+                        </p>
+
+
+                        <h3>
+                            TH R2
+                        </h3>
+
+
+                        <p>
+                            더 넓은 공간이 필요한<br>
+                            가족을 위한 4인용 모델.
+                        </p>
+
+
+                        <a href="#">
+                            자세히 보기 ›
+                        </a>
+
+                    </div>
+
 
                 </article>
 
 
-                <!-- PURPLE -->
-                <article class="product">
 
-                    <div class="product-image">
+                <!-- =========================
+                     TH X1
+                ========================== -->
+
+                <article class="model-card model-card-photo">
+
+
+                    <div class="model-image">
 
                         <img
-                            src="{{ url_for('static', filename='images/nova-purple.png') }}"
-                            alt="Nova One Purple"
+                            src="{{ url_for('static', filename='images/camper-x1.jpg') }}"
+                            alt="TH X1"
                         >
 
                     </div>
 
-                    <h3>
-                        Lavender Purple
-                    </h3>
-
-                    <span class="color-circle purple"></span>
-
-                </article>
 
 
-                <!-- GREEN -->
-                <article class="product">
+                    <div class="model-content">
 
-                    <div class="product-image">
+                        <p class="model-type">
+                            ADVENTURE
+                        </p>
 
-                        <img
-                            src="{{ url_for('static', filename='images/nova-green.png') }}"
-                            alt="Nova One Green"
-                        >
+
+                        <h3>
+                            TH X1
+                        </h3>
+
+
+                        <p>
+                            새로운 길을 찾아 떠나는<br>
+                            어드벤처 모델.
+                        </p>
+
+
+                        <a href="#">
+                            자세히 보기 ›
+                        </a>
 
                     </div>
 
-                    <h3>
-                        Sage Green
-                    </h3>
-
-                    <span class="color-circle green"></span>
 
                 </article>
+
 
             </div>
+
 
         </section>
 
 
-        <!-- FINAL -->
+
+        <!-- =================================
+             FINAL SECTION
+        ================================== -->
+
         <section class="final-section">
 
             <p class="section-small">
-                NOVA ONE
+                TH
             </p>
 
+
             <h2>
-                당신의 일상에<br>
-                새로운 기준을.
+                길이 끝나는 곳에서,<br>
+                여행이 시작됩니다.
             </h2>
 
+
+            <p>
+                원하는 곳이 곧 당신의 새로운 집이 됩니다.
+            </p>
+
+
             <a
-                href="#colors"
+                href="#models"
                 class="btn btn-primary"
             >
-                Nova One 만나보기
+                TH 모델 만나보기
             </a>
 
         </section>
 
+
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
     <footer>
 
+
         <div class="footer-inner">
+
 
             <div class="footer-logo">
 
                 <h3>
-                    NOVA
+                    TH
                 </h3>
 
                 <p>
-                    Technology for your everyday life.
+                    Travel beyond home.
                 </p>
 
             </div>
+
 
 
             <div class="footer-links">
@@ -406,28 +571,32 @@
                     Main
                 </a>
 
-                <a href="/about">
-                    About
+                <a href="#models">
+                    Models
                 </a>
 
                 <a href="#features">
                     Features
                 </a>
 
-                <a href="#colors">
-                    Products
+                <a href="/about">
+                    About
                 </a>
 
             </div>
 
+
         </div>
 
 
+
         <p class="copyright">
-            Copyright © 2026 NOVA MOBILE.
+            Copyright © 2026 TH. All rights reserved.
         </p>
 
+
     </footer>
+
 
 </body>
 
