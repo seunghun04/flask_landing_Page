@@ -227,70 +227,113 @@ nav a.active::after {
 }
 
 
-
 /* =========================================
    HERO
 ========================================= */
 
 .hero {
+    position: relative;
 
-    min-height: 790px;
+    width: 100%;
+
+    /* 헤더 70px을 제외한 화면 전체 */
+    height: calc(100vh - 70px);
+    min-height: 700px;
 
     display: flex;
-
     align-items: center;
 
     overflow: hidden;
 
-    background:
-
-        radial-gradient(
-            circle at 77% 45%,
-            #ebe6df 0%,
-            #f7f5f1 40%,
-            #ffffff 72%
-        );
+    background-color: #111;
 }
 
 
-.hero-inner {
+/* 배경 MP4 */
+
+.hero-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
 
     width: 100%;
+    height: 100%;
 
+    object-fit: cover;
+
+    /*
+       영상에서 중요한 부분 위치 조절
+       50% = 중앙
+       60~70% = 오른쪽을 더 보여줌
+    */
+    object-position: 60% center;
+
+    z-index: 0;
+}
+
+
+/* 영상 위 그라데이션 */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0.70) 0%,
+            rgba(10, 10, 10, 0.52) 32%,
+            rgba(10, 10, 10, 0.20) 62%,
+            rgba(10, 10, 10, 0.04) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* HERO CONTENT */
+
+.hero-inner {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
     max-width: 1400px;
 
     margin: 0 auto;
 
-    padding:
-        70px 70px;
+    padding: 70px;
 
     display: flex;
-
     align-items: center;
 }
-
 
 
 /* HERO LEFT */
 
 .hero-text {
-
-    width: 45%;
+    width: 55%;
+    max-width: 650px;
 
     position: relative;
 
     z-index: 2;
+
+    color: white;
 }
 
 
 .hero-small {
-
     margin-bottom: 15px;
 
-    color: #8a7658;
+    color: #ead8b8;
 
     font-size: 15px;
-
     font-weight: 700;
 
     letter-spacing: 2px;
@@ -298,8 +341,9 @@ nav a.active::after {
 
 
 .hero-text h1 {
-
     margin-bottom: 30px;
+
+    color: white;
 
     font-size: 67px;
 
@@ -310,10 +354,9 @@ nav a.active::after {
 
 
 .hero-subtitle {
-
     margin-bottom: 35px;
 
-    color: #6e6e73;
+    color: rgba(255, 255, 255, 0.82);
 
     font-size: 23px;
 
@@ -322,58 +365,31 @@ nav a.active::after {
 
 
 .hero-buttons {
-
     display: flex;
 
     gap: 12px;
 }
 
 
+/* 영상 위 보조 버튼 */
 
-/* HERO CAMPER IMAGE */
+.hero .btn-secondary {
+    color: white;
 
-.hero-product {
+    background:
+        rgba(255, 255, 255, 0.12);
 
-    width: 55%;
+    border:
+        1px solid rgba(255, 255, 255, 0.45);
 
-    min-height: 570px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
+    backdrop-filter: blur(10px);
 }
 
 
-.hero-product img {
-
-    width: 100%;
-
-    max-width: 760px;
-
-    object-fit: contain;
-
-    filter:
-
-        drop-shadow(
-            0 35px 30px
-            rgba(0, 0, 0, 0.16)
-        );
-
-    transition:
-        transform 0.5s ease;
+.hero .btn-secondary:hover {
+    background:
+        rgba(255, 255, 255, 0.22);
 }
-
-
-.hero-product img:hover {
-
-    transform:
-        translateY(-8px)
-        scale(1.02);
-}
-
-
 
 /* =========================================
    INTRO
@@ -1273,10 +1289,7 @@ footer {
 
     /* HERO */
 
-    .hero {
-
-        min-height: auto;
-    }
+    
 
 
     .hero-inner {
@@ -1302,21 +1315,6 @@ footer {
         justify-content: center;
     }
 
-
-    .hero-product {
-
-        width: 100%;
-
-        min-height: auto;
-
-        margin-top: 60px;
-    }
-
-
-    .hero-product img {
-
-        max-width: 650px;
-    }
 
 
 
@@ -1441,10 +1439,7 @@ footer {
     }
 
 
-    .hero-product {
-
-        margin-top: 40px;
-    }
+    
 
 
 

@@ -79,68 +79,67 @@
 
         <section class="hero">
 
-            <div class="hero-inner">
+    <!-- 배경 영상 -->
+    <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+    >
+        <source
+            src="{{ url_for('static', filename='videos/th-r1.mp4') }}"
+            type="video/mp4"
+        >
+    </video>
 
 
-                <!-- 왼쪽 텍스트 -->
-
-                <div class="hero-text">
-
-                    <p class="hero-small">
-                        TH R1
-                    </p>
+    <!-- 영상 위 어두움/밝기 처리 -->
+    <div class="hero-overlay"></div>
 
 
-                    <h1>
-                        일상을 떠나,<br>
-                        어디서든 집처럼.
-                    </h1>
+    <!-- 글자 영역 -->
+    <div class="hero-inner">
 
+        <div class="hero-text">
 
-                    <p class="hero-subtitle">
-                        자유로운 여행을 위한<br>
-                        프리미엄 캠핑카.
-                    </p>
+            <p class="hero-small">
+                TH R1
+            </p>
 
+            <h1>
+                일상을 떠나,<br>
+                어디서든 집처럼.
+            </h1>
 
-                    <div class="hero-buttons">
+            <p class="hero-subtitle">
+                자유로운 여행을 위한<br>
+                프리미엄 캠핑카.
+            </p>
 
-                        <a
-                            href="#features"
-                            class="btn btn-primary"
-                        >
-                            더 알아보기
-                        </a>
+            <div class="hero-buttons">
 
+                <a
+                    href="#features"
+                    class="btn btn-primary"
+                >
+                    더 알아보기
+                </a>
 
-                        <a
-                            href="#models"
-                            class="btn btn-secondary"
-                        >
-                            모델 보기
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- 오른쪽 메인 이미지 -->
-
-                <div class="hero-product">
-
-                    <img
-                        src="{{ url_for('static', filename='images/camper-main.png') }}"
-                        alt="TH R1 캠핑카"
-                    >
-
-                </div>
-
+                <a
+                    href="#models"
+                    class="btn btn-secondary"
+                >
+                    모델 보기
+                </a>
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
 
