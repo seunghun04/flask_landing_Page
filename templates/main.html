@@ -1,0 +1,41 @@
+main.html  
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ABC Company</title>
+
+	<link
+		rel = "stylesheet"
+		href = "{{ url_for('static',filename = 'css/style.css') }}"
+	>
+</head>
+
+<body>
+	<header>
+		<h1>ABC COMPANY</h1>
+		<nav>
+			<a href="{{ url_for('main') }}">MAIN</a>
+			<a href="{{ url_for('about') }}">ABOUT</a>
+		</nav>
+	</header>
+
+	<main>
+		<h2>Welcome to ABC Company</h2>
+		<p>
+			기술을 통해 더 나은 미래를 만드는 기업입니다.
+		</p>
+
+		<img src="{{ url_for('static', filename='images/company.png') }}" >
+
+		<p>
+			<a href = "{{ url_for('about') }}">
+				회사소개 보기
+			</a>
+		</p>
+	</main>
+</body>
+</html>
+
