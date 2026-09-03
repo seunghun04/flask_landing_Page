@@ -1,41 +1,603 @@
-main.html  
-
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
-	<meta charset="UTF-8">
-	<title>ABC Company</title>
+    <meta charset="UTF-8">
 
-	<link
-		rel = "stylesheet"
-		href = "{{ url_for('static',filename = 'css/style.css') }}"
-	>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TH | Premium Camper</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
 </head>
 
+
 <body>
-	<header>
-		<h1>ABC COMPANY</h1>
-		<nav>
-			<a href="{{ url_for('main') }}">MAIN</a>
-			<a href="{{ url_for('about') }}">ABOUT</a>
-		</nav>
-	</header>
 
-	<main>
-		<h2>Welcome to ABC Company</h2>
-		<p>
-			기술을 통해 더 나은 미래를 만드는 기업입니다.
-		</p>
 
-		<img src="{{ url_for('static', filename='images/company.png') }}" >
+    <!-- =====================================
+         HEADER
+    ====================================== -->
 
-		<p>
-			<a href = "{{ url_for('about') }}">
-				회사소개 보기
-			</a>
-		</p>
-	</main>
+    <header class="header">
+
+        <div class="header-inner">
+
+            <a
+                href="/main"
+                class="logo"
+            >
+                TH
+            </a>
+
+
+            <nav>
+
+                <a
+                    href="/main"
+                    class="active"
+                >
+                    MAIN
+                </a>
+
+                <a href="#models">
+                    MODELS
+                </a>
+
+                <a href="#features">
+                    FEATURES
+                </a>
+
+                <a href="/about">
+                    ABOUT
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
+    <main>
+
+
+        <!-- =================================
+             HERO
+        ================================== -->
+
+        <section class="hero">
+
+            <div class="hero-inner">
+
+
+                <!-- 왼쪽 텍스트 -->
+
+                <div class="hero-text">
+
+                    <p class="hero-small">
+                        TH R1
+                    </p>
+
+
+                    <h1>
+                        일상을 떠나,<br>
+                        어디서든 집처럼.
+                    </h1>
+
+
+                    <p class="hero-subtitle">
+                        자유로운 여행을 위한<br>
+                        프리미엄 캠핑카.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#features"
+                            class="btn btn-primary"
+                        >
+                            더 알아보기
+                        </a>
+
+
+                        <a
+                            href="#models"
+                            class="btn btn-secondary"
+                        >
+                            모델 보기
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 오른쪽 메인 이미지 -->
+
+                <div class="hero-product">
+
+                    <img
+                        src="{{ url_for('static', filename='images/camper-main.png') }}"
+                        alt="TH R1 캠핑카"
+                    >
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             INTRO
+        ================================== -->
+
+        <section class="intro">
+
+            <p class="section-small">
+                TH R1
+            </p>
+
+
+            <h2>
+                여행의 새로운 기준.
+            </h2>
+
+
+            <p>
+                단순한 이동수단을 넘어<br>
+                휴식과 여행을 위한 하나의 공간.<br>
+                TH R1과 함께 새로운 길을 만나보세요.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================
+             FEATURES
+        ================================== -->
+
+        <section
+            class="features"
+            id="features"
+        >
+
+
+            <!-- =============================
+                 SPACE
+            ============================== -->
+
+            <article class="feature-large">
+
+
+                <div class="feature-text">
+
+                    <p class="section-small">
+                        SPACE
+                    </p>
+
+
+                    <h2>
+                        작지만,<br>
+                        넓게.
+                    </h2>
+
+
+                    <p>
+                        효율적으로 설계된 실내 공간은
+                        침실과 주방, 수납공간까지
+                        여행에 필요한 모든 것을 담았습니다.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-image">
+
+                    <img
+                        src="{{ url_for('static', filename='images/camper-interior.jpg') }}"
+                        alt="TH 캠핑카 실내"
+                    >
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =============================
+                 FEATURE GRID
+            ============================== -->
+
+            <div class="feature-grid">
+
+
+                <!-- POWER -->
+
+                <article class="feature-card">
+
+
+                    <div class="card-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/camper-power.jpg') }}"
+                            alt="TH 캠핑카 전력 시스템"
+                        >
+
+                    </div>
+
+
+
+                    <div class="card-content">
+
+                        <p class="section-small">
+                            POWER
+                        </p>
+
+
+                        <h3>
+                            어디서든<br>
+                            자유롭게.
+                        </h3>
+
+
+                        <p>
+                            대용량 배터리와 태양광 충전 시스템으로
+                            도심을 벗어나서도 안정적으로
+                            전기를 사용할 수 있습니다.
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- COMFORT -->
+
+                <article class="feature-card dark-card">
+
+
+                    <div class="card-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/camper-comfort.jpg') }}"
+                            alt="TH 캠핑카 침실"
+                        >
+
+                    </div>
+
+
+
+                    <div class="card-content">
+
+                        <p class="section-small">
+                            COMFORT
+                        </p>
+
+
+                        <h3>
+                            집처럼<br>
+                            편안하게.
+                        </h3>
+
+
+                        <p>
+                            편안한 침실과 냉난방 시스템,
+                            은은한 실내 조명으로
+                            여행지에서도 편안한 휴식을 제공합니다.
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             MODELS
+        ================================== -->
+
+        <section
+            class="models"
+            id="models"
+        >
+
+
+            <div class="section-heading">
+
+                <p class="section-small">
+                    MODELS
+                </p>
+
+
+                <h2>
+                    당신의 여행에 맞는 TH.
+                </h2>
+
+
+                <p>
+                    여행 방식에 따라 선택할 수 있는 세 가지 모델.
+                </p>
+
+            </div>
+
+
+
+            <div class="model-grid">
+
+
+                <!-- =========================
+                     TH R1
+                ========================== -->
+
+                <article class="model-card model-card-photo">
+
+
+                    <!-- 카드 전체 배경 사진 -->
+
+                    <div class="model-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/camper-r1.jpg') }}"
+                            alt="TH R1"
+                        >
+
+                    </div>
+
+
+
+                    <!-- 사진 위 텍스트 -->
+
+                    <div class="model-content">
+
+                        <p class="model-type">
+                            COMPACT
+                        </p>
+
+
+                        <h3>
+                            TH R1
+                        </h3>
+
+
+                        <p>
+                            가볍게 떠나는 여행을 위한<br>
+                            2인용 컴팩트 모델.
+                        </p>
+
+
+                        <a href="#">
+                            자세히 보기 ›
+                        </a>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- =========================
+                     TH R2
+                ========================== -->
+
+                <article class="model-card model-card-photo">
+
+
+                    <div class="model-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/camper-r2.jpg') }}"
+                            alt="TH R2"
+                        >
+
+                    </div>
+
+
+
+                    <div class="model-content">
+
+                        <p class="model-type">
+                            FAMILY
+                        </p>
+
+
+                        <h3>
+                            TH R2
+                        </h3>
+
+
+                        <p>
+                            더 넓은 공간이 필요한<br>
+                            가족을 위한 4인용 모델.
+                        </p>
+
+
+                        <a href="#">
+                            자세히 보기 ›
+                        </a>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- =========================
+                     TH X1
+                ========================== -->
+
+                <article class="model-card model-card-photo">
+
+
+                    <div class="model-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/camper-x1.jpg') }}"
+                            alt="TH X1"
+                        >
+
+                    </div>
+
+
+
+                    <div class="model-content">
+
+                        <p class="model-type">
+                            ADVENTURE
+                        </p>
+
+
+                        <h3>
+                            TH X1
+                        </h3>
+
+
+                        <p>
+                            새로운 길을 찾아 떠나는<br>
+                            어드벤처 모델.
+                        </p>
+
+
+                        <a href="#">
+                            자세히 보기 ›
+                        </a>
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             FINAL SECTION
+        ================================== -->
+
+        <section class="final-section">
+
+            <p class="section-small">
+                TH
+            </p>
+
+
+            <h2>
+                길이 끝나는 곳에서,<br>
+                여행이 시작됩니다.
+            </h2>
+
+
+            <p>
+                원하는 곳이 곧 당신의 새로운 집이 됩니다.
+            </p>
+
+
+            <a
+                href="#models"
+                class="btn btn-primary"
+            >
+                TH 모델 만나보기
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+
+        <div class="footer-inner">
+
+
+            <div class="footer-logo">
+
+                <h3>
+                    TH
+                </h3>
+
+                <p>
+                    Travel beyond home.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <a href="/main">
+                    Main
+                </a>
+
+                <a href="#models">
+                    Models
+                </a>
+
+                <a href="#features">
+                    Features
+                </a>
+
+                <a href="/about">
+                    About
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <p class="copyright">
+            Copyright © 2026 TH. All rights reserved.
+        </p>
+
+
+    </footer>
+
+
 </body>
-</html>
 
+</html>
