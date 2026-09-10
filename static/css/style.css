@@ -1856,16 +1856,22 @@ footer {
 
 .feature-video-bg {
     position: absolute;
-    inset: -3%;
 
-    width: 106%;
-    height: 106%;
+    top: -4%;
+    left: -4%;
+
+    width: 108%;
+    height: 108%;
 
     object-fit: cover;
 
     z-index: 0;
 
-    transform: translate3d(0, 0, 0) scale(1.03);
+    transform:
+        translate3d(0, 0, 0)
+        scale(1.04);
 
     will-change: transform;
+
+    backface-visibility: hidden;
 }
