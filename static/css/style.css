@@ -1857,21 +1857,29 @@ footer {
 .feature-video-bg {
     position: absolute;
 
-    top: -4%;
-    left: -4%;
+    top: -5%;
+    left: -5%;
 
-    width: 108%;
-    height: 108%;
+    width: 110%;
+    height: 110%;
 
     object-fit: cover;
 
     z-index: 0;
 
     transform:
+        perspective(1200px)
         translate3d(0, 0, 0)
-        scale(1.04);
+        rotateX(0deg)
+        rotateY(0deg)
+        scale(1.065);
+
+    transform-origin: center center;
 
     will-change: transform;
 
     backface-visibility: hidden;
+
+    /* 이건 넣지 말 것 */
+    transition: none;
 }
