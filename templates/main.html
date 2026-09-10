@@ -182,46 +182,33 @@
             INTERACTIVE SPACE
         ============================== -->
 
-        <article class="feature-large interactive-feature">
+<article class="feature-large feature-video-card">
 
-            <!-- 움직이는 배경 이미지 -->
-            <div class="interactive-feature-bg">
+    <video autoplay muted loop playsinline class="feature-video-bg">
+        <source
+            src="{{ url_for('static', filename='videos/th_camper_seamless_loop.mp4') }}"
+            type="video/mp4"
+        >
+    </video>
 
-                <img
-                    src="{{ url_for('static', filename='images/camper-interior.jpg') }}"
-                    alt="TH 캠핑카 실내"
-                    class="parallax-image"
-                >
+    <div class="feature-video-overlay"></div>
 
-            </div>
+    <div class="feature-video-content">
+        <p class="section-small">SPACE</p>
 
+        <h2>
+            작지만,<br>
+            넓게.
+        </h2>
 
-            <!-- 어두운 그라데이션 -->
-            <div class="interactive-feature-overlay"></div>
+        <p>
+            효율적으로 설계된 실내 공간은
+            침실과 주방, 수납공간까지
+            여행에 필요한 모든 것을 담았습니다.
+        </p>
+    </div>
 
-
-            <!-- 글자 -->
-            <div class="interactive-feature-content">
-
-                <p class="section-small">
-                    SPACE
-                </p>
-
-                <h2>
-                    작지만,<br>
-                    넓게.
-                </h2>
-
-                <p>
-                    효율적으로 설계된 실내 공간은
-                    침실과 주방, 수납공간까지
-                    여행에 필요한 모든 것을 담았습니다.
-                </p>
-
-            </div>
-
-        </article>
-
+</article>
 
             <!-- =============================
                  FEATURE GRID
