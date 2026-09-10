@@ -1826,3 +1826,30 @@ footer {
 
     color: white;
 }
+
+.feature-video-content .section-small {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+.feature-video-content h2 {
+    font-size: 54px;
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    margin-bottom: 24px;
+}
+
+
+.feature-video-content > p:last-child {
+    max-width: 520px;
+
+    font-size: 20px;
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.88);
+}
