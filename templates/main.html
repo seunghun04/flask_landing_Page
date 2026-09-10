@@ -178,49 +178,49 @@
             id="features"
         >
 
+        <!-- =============================
+            INTERACTIVE SPACE
+        ============================== -->
 
-            <!-- =============================
-                 SPACE
-            ============================== -->
+        <article class="feature-large interactive-feature">
 
-            <article class="feature-large">
+            <!-- 움직이는 배경 이미지 -->
+            <div class="interactive-feature-bg">
 
+                <img
+                    src="{{ url_for('static', filename='images/camper-interior.jpg') }}"
+                    alt="TH 캠핑카 실내"
+                    class="parallax-image"
+                >
 
-                <div class="feature-text">
-
-                    <p class="section-small">
-                        SPACE
-                    </p>
-
-
-                    <h2>
-                        작지만,<br>
-                        넓게.
-                    </h2>
+            </div>
 
 
-                    <p>
-                        효율적으로 설계된 실내 공간은
-                        침실과 주방, 수납공간까지
-                        여행에 필요한 모든 것을 담았습니다.
-                    </p>
-
-                </div>
+            <!-- 어두운 그라데이션 -->
+            <div class="interactive-feature-overlay"></div>
 
 
+            <!-- 글자 -->
+            <div class="interactive-feature-content">
 
-                <div class="feature-image">
+                <p class="section-small">
+                    SPACE
+                </p>
 
-                    <img
-                        src="{{ url_for('static', filename='images/camper-interior.jpg') }}"
-                        alt="TH 캠핑카 실내"
-                    >
+                <h2>
+                    작지만,<br>
+                    넓게.
+                </h2>
 
-                </div>
+                <p>
+                    효율적으로 설계된 실내 공간은
+                    침실과 주방, 수납공간까지
+                    여행에 필요한 모든 것을 담았습니다.
+                </p>
 
+            </div>
 
-            </article>
-
+        </article>
 
 
             <!-- =============================
@@ -595,6 +595,72 @@
 
 
     </footer>
+
+
+<script>
+
+    const interactiveFeature =
+        document.querySelector(".interactive-feature");
+
+    const parallaxImage =
+        document.querySelector(".parallax-image");
+
+
+    interactiveFeature.addEventListener(
+        "mousemove",
+        function (event) {
+
+            const rect =
+                interactiveFeature.getBoundingClientRect();
+
+
+            /* 마우스 위치 */
+
+            const mouseX =
+                event.clientX - rect.left;
+
+            const mouseY =
+                event.clientY - rect.top;
+
+
+            /* -1 ~ 1 값으로 변환 */
+
+            const x =
+                (mouseX / rect.width - 0.5) * 2;
+
+            const y =
+                (mouseY / rect.height - 0.5) * 2;
+
+
+            /* 마우스 반대 방향으로 사진 이동 */
+
+            const moveX =
+                x * -18;
+
+            const moveY =
+                y * -12;
+
+
+            parallaxImage.style.transform =
+                `translate(${moveX}px, ${moveY}px) scale(1.08)`;
+
+        }
+    );
+
+
+    /* 마우스가 영역 밖으로 나가면 원위치 */
+
+    interactiveFeature.addEventListener(
+        "mouseleave",
+        function () {
+
+            parallaxImage.style.transform =
+                "translate(0px, 0px) scale(1.05)";
+
+        }
+    );
+
+</script>
 
 
 </body>

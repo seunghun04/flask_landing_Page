@@ -1662,3 +1662,123 @@ footer {
     }
 
 }
+
+/* =========================================
+   INTERACTIVE FEATURE
+========================================= */
+
+.interactive-feature {
+    position: relative;
+
+    width: 100%;
+    height: 650px;
+
+    overflow: hidden;
+
+    border-radius: 32px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #111;
+}
+
+
+/* 움직이는 사진 영역 */
+
+.interactive-feature-bg {
+    position: absolute;
+
+    inset: -5%;
+
+    width: 110%;
+    height: 110%;
+
+    z-index: 0;
+
+    overflow: hidden;
+}
+
+
+/* 실제 사진 */
+
+.parallax-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    /* 가장자리 노출 방지 */
+    transform: scale(1.05);
+
+    transition: transform 0.15s ease-out;
+
+    will-change: transform;
+}
+
+
+/* 사진 위 그라데이션 */
+
+.interactive-feature-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0.72) 0%,
+            rgba(10, 10, 10, 0.48) 35%,
+            rgba(10, 10, 10, 0.12) 70%,
+            rgba(10, 10, 10, 0.02) 100%
+        );
+}
+
+
+/* 텍스트 */
+
+.interactive-feature-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 45%;
+
+    padding: 70px;
+
+    color: white;
+}
+
+
+.interactive-feature-content .section-small {
+    color: #ead8b8;
+}
+
+
+.interactive-feature-content h2 {
+    margin-bottom: 25px;
+
+    color: white;
+
+    font-size: 60px;
+
+    line-height: 1.08;
+
+    letter-spacing: -3px;
+}
+
+
+.interactive-feature-content > p:last-child {
+    max-width: 400px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
