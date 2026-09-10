@@ -585,68 +585,82 @@
 
 
 <script>
+const featureCard =
+    document.querySelector(".feature-video-card");
 
-    const interactiveFeature =
-        document.querySelector(".interactive-feature");
-
-    const parallaxImage =
-        document.querySelector(".parallax-image");
-
-
-    interactiveFeature.addEventListener(
-        "mousemove",
-        function (event) {
-
-            const rect =
-                interactiveFeature.getBoundingClientRect();
+const featureVideo =
+    document.querySelector(".feature-video-bg");
 
 
-            /* 마우스 위치 */
+let targetX = 0;
+let targetY = 0;
 
-            const mouseX =
-                event.clientX - rect.left;
-
-            const mouseY =
-                event.clientY - rect.top;
+let currentX = 0;
+let currentY = 0;
 
 
-            /* -1 ~ 1 값으로 변환 */
+featureCard.addEventListener("mousemove", function(event) {
 
-            const x =
-                (mouseX / rect.width - 0.5) * 2;
-
-            const y =
-                (mouseY / rect.height - 0.5) * 2;
+    const rect =
+        featureCard.getBoundingClientRect();
 
 
-            /* 마우스 반대 방향으로 사진 이동 */
+    const mouseX =
+        (event.clientX - rect.left) / rect.width;
 
-            const moveX =
-                x * -18;
-
-            const moveY =
-                y * -12;
+    const mouseY =
+        (event.clientY - rect.top) / rect.height;
 
 
-            parallaxImage.style.transform =
-                `translate(${moveX}px, ${moveY}px) scale(1.08)`;
+    const x =
+        (mouseX - 0.5) * 2;
 
-        }
-    );
+    const y =
+        (mouseY - 0.5) * 2;
 
 
-    /* 마우스가 영역 밖으로 나가면 원위치 */
+    /* 이동량 */
+    targetX = x * -6;
+    targetY = y * -4;
 
-    interactiveFeature.addEventListener(
-        "mouseleave",
-        function () {
+});
 
-            parallaxImage.style.transform =
-                "translate(0px, 0px) scale(1.05)";
 
-        }
-    );
+featureCard.addEventListener("mouseleave", function() {
 
+    targetX = 0;
+    targetY = 0;
+
+});
+
+
+function animateVideo() {
+
+    /*
+       숫자가 작을수록 천천히 따라옴
+       0.05 정도 추천
+    */
+
+    currentX +=
+        (targetX - currentX) * 0.05;
+
+    currentY +=
+        (targetY - currentY) * 0.05;
+
+
+    featureVideo.style.transform =
+        `translate3d(
+            ${currentX}px,
+            ${currentY}px,
+            0
+        ) scale(1.03)`;
+
+
+    requestAnimationFrame(animateVideo);
+}
+
+
+animateVideo();
 </script>
 
 

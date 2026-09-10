@@ -1853,3 +1853,19 @@ footer {
 
     color: rgba(255, 255, 255, 0.88);
 }
+
+.feature-video-bg {
+    position: absolute;
+    inset: -3%;
+
+    width: 106%;
+    height: 106%;
+
+    object-fit: cover;
+
+    z-index: 0;
+
+    transform: translate3d(0, 0, 0) scale(1.03);
+
+    will-change: transform;
+}
